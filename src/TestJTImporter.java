@@ -22,7 +22,9 @@
 //	THE SOFTWARE.
 //################################################################################
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -34,7 +36,38 @@ import de.raida.jcadlib.cadimport.jt.JTImporter;
 /**
  * Test class for the JT importer.
  */
+
+class ToFile {
+
+	
+    public static void write(String abiStr) {
+        BufferedWriter writer = null;
+        try {
+            //create a temporary file
+            
+            File logFile = new File("test");
+
+            // This will output the full path where the file will be written to...
+            System.out.println(logFile.getCanonicalPath());
+
+            writer = new BufferedWriter(new FileWriter(logFile,true));
+            writer.write(abiStr);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                // Close the writer regardless of what happens...
+                writer.close();
+            } catch (Exception e) {
+            }
+        }
+    }
+}
 public class TestJTImporter {
+	
+	//to write to final data file
+	ToFile testdata=new ToFile();
+	
 	/**
 	 * Test export.
 	 * @param jtImporter    Instance of the JT importer
@@ -118,8 +151,9 @@ public class TestJTImporter {
 			System.out.println("         ... # entities: " + points.size());
 			for(Object[] point : points){
 				List<Double> vertices = (List<Double>)point[0];
-				System.out.println("             ... [entity 1] vertices: " + (vertices.size() / 3) + " => (showing 1) " + vertices.subList(0, 3));
-
+				System.out.println("             ... [entity 1] vertices: " + (vertices.size() / 3) + " => (showing 1) " + vertices.subList(0, 3));				
+				
+				
 				List<Float> colors = (List<Float>)point[1];
 				System.out.println("             ... [entity 1] colors: " + (colors.size() / 3) + " => (showing 1) " + colors.subList(0, 3));
 
@@ -172,9 +206,19 @@ public class TestJTImporter {
 				System.out.println("             ... [entity 1] colors: " + colors.length + " => (showing 1) [" + colors[0] + ", " + colors[1] + ", " + colors[2] + "]");
 				System.out.println("             ... [entity 1] normals: " + normals.length + " => (showing 1) [" + normals[0] + ", " + normals[1] + ", " + normals[2] + "]");
 
+				//writing vertices to file
+				for (int i = 0; i < vertices.length-3; i+=3) {
+					String ab = vertices[i]+","+vertices[i+1]+","+vertices[i+2]+"\n";
+					ToFile.write(ab);
+				}
+				//ToFile.write("\n");
+				
+				
 				if(faces.size() > 1){
 					System.out.println("             ...");
 				}
+				
+				
 				break;
 			}
 		}
@@ -187,5 +231,7 @@ public class TestJTImporter {
 	public static void main(String[] arguments){
 		TestJTImporter testJTImporter = new TestJTImporter();
 		testJTImporter.testImport(new JTImporter(), "data");
+		System.out.println("\n*******************************");
+		
 	}
 }
