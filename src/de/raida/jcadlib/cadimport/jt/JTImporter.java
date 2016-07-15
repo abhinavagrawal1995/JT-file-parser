@@ -25,8 +25,10 @@
 package de.raida.jcadlib.cadimport.jt;
 
 import java.awt.Color;
+import java.io.BufferedWriter;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.InputStream;
 import java.net.ConnectException;
 import java.net.HttpURLConnection;
@@ -85,6 +87,34 @@ import de.raida.jcadlib.cadimport.jt.reader.WorkingContext;
 import de.raida.progress.ProgressEvent;
 import de.raida.progress.ProgressListenerInterface;
 
+
+class ToFile {
+
+	
+    public static void write(String abiStr) {
+        BufferedWriter writer = null;
+        try {
+            //create a temporary file
+            
+            File logFile = new File("test2");
+
+            // This will output the full path where the file will be written to...
+            System.out.println(logFile.getCanonicalPath());
+
+            writer = new BufferedWriter(new FileWriter(logFile,true));
+            writer.write(abiStr);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                // Close the writer regardless of what happens...
+                writer.close();
+            } catch (Exception e) {
+            }
+        }
+    }
+}
+
 /**
  * Imports the JT file, creates the model and gives access to the models attributes.
  * <br>(c) 2014 by <a href="mailto:j.raida@gmx.net">Johannes Raida</a>
@@ -92,6 +122,12 @@ import de.raida.progress.ProgressListenerInterface;
  * @version 1.0
  */
 public class JTImporter {
+	
+	
+	//to write to final data file
+		ToFile testdata=new ToFile();
+		
+		
 	/** Regular expression of the JT signature (version 8) */
 	private final String JT_SIGNATURE_REG_EXP_V8 = "Version \\d\\.\\d.{64} {5}";
 
@@ -953,6 +989,7 @@ public class JTImporter {
 							vertices[k + 1] = vertex.getY();
 							vertices[k + 2] = vertex.getZ();
 
+							
 							// Apply the rotation to each normal 
 							Point3d normal = new Point3d(normalsAsList.get(k), normalsAsList.get(k + 1), normalsAsList.get(k + 2));
 							rotation.transform(normal);
@@ -960,6 +997,8 @@ public class JTImporter {
 							normals[k + 1] = normal.getY();
 							normals[k + 2] = normal.getZ();
 						}
+						
+						
 
 						// Fill the index list
 						for(int j = startIndex; j < (endIndex - 2); j++){
@@ -969,6 +1008,15 @@ public class JTImporter {
 							l += 3;
 						}
 					}
+					//abi edit : writing vertices to file
+					for (int i1 = 0; i1 < vertices.length-3; i1+=3) {
+						String ab = vertices[i1]+","+vertices[i1+1]+","+vertices[i1+2]+"\n";
+						ToFile.write(ab);
+						
+					}
+					System.out.println("Written to file: "+vertices.length+" vertices");
+					//ToFile.write("\n");
+					
 					_jtModel.addTriangles(vertices, faceIndices, colors, normals, layerName);
 
 				} else if(pointSetShapeLODElement != null){

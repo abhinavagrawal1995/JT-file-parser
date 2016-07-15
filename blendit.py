@@ -13,7 +13,7 @@ def create_Vertices (name, verts):
     return ob
 
 vertices=[]
-with open('test', 'r') as myfile:
+with open('test2', 'r') as myfile:
    for line in myfile:
    		vertices.append(eval(line))
 

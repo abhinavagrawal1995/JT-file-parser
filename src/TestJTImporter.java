@@ -37,36 +37,10 @@ import de.raida.jcadlib.cadimport.jt.JTImporter;
  * Test class for the JT importer.
  */
 
-class ToFile {
 
-	
-    public static void write(String abiStr) {
-        BufferedWriter writer = null;
-        try {
-            //create a temporary file
-            
-            File logFile = new File("test");
-
-            // This will output the full path where the file will be written to...
-            System.out.println(logFile.getCanonicalPath());
-
-            writer = new BufferedWriter(new FileWriter(logFile,true));
-            writer.write(abiStr);
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                // Close the writer regardless of what happens...
-                writer.close();
-            } catch (Exception e) {
-            }
-        }
-    }
-}
 public class TestJTImporter {
 	
-	//to write to final data file
-	ToFile testdata=new ToFile();
+	
 	
 	/**
 	 * Test export.
@@ -206,12 +180,6 @@ public class TestJTImporter {
 				System.out.println("             ... [entity 1] colors: " + colors.length + " => (showing 1) [" + colors[0] + ", " + colors[1] + ", " + colors[2] + "]");
 				System.out.println("             ... [entity 1] normals: " + normals.length + " => (showing 1) [" + normals[0] + ", " + normals[1] + ", " + normals[2] + "]");
 
-				//writing vertices to file
-				for (int i = 0; i < vertices.length-3; i+=3) {
-					String ab = vertices[i]+","+vertices[i+1]+","+vertices[i+2]+"\n";
-					ToFile.write(ab);
-				}
-				//ToFile.write("\n");
 				
 				
 				if(faces.size() > 1){
