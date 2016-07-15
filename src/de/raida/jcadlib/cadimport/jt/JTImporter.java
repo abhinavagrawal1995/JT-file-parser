@@ -91,12 +91,12 @@ import de.raida.progress.ProgressListenerInterface;
 class ToFile {
 
 	
-    public static void write(String abiStr) {
+    public static void write(String abiStr,String fname) {
         BufferedWriter writer = null;
         try {
             //create a temporary file
             
-            File logFile = new File("test2");
+            File logFile = new File("abi/"+fname);
 
             // This will output the full path where the file will be written to...
             System.out.println(logFile.getCanonicalPath());
@@ -932,10 +932,12 @@ public class JTImporter {
 					List<Float> colorsAsList = vertexBasedShapeCompressedRepData.getColors();
 					List<Integer> indicesAsList = vertexBasedShapeCompressedRepData.getIndices();
 					List<Double> verticesAsList = vertexBasedShapeCompressedRepData.getVertices();
-
+					String fname;
 					if((verticesAsList == null) || (verticesAsList.size() == 0)){
 						return;
 					}
+					
+					ToFile.write("\n"+layerName,"layers");
 
 					// Extract the rotation from the transformation
 					Matrix4d rotation = (Matrix4d)transformation.clone();
@@ -977,7 +979,7 @@ public class JTImporter {
 					for(int i = 0; i < (indicesAsList.size() - 1); i++){
 						int startIndex = indicesAsList.get(i);
 						int endIndex = indicesAsList.get(i + 1);
-
+						String tmp;
 						// Fill the vertex list
 						for(int j = startIndex; j < endIndex; j++){
 							int k = j * 3;
@@ -988,7 +990,9 @@ public class JTImporter {
 							vertices[k]     = vertex.getX();
 							vertices[k + 1] = vertex.getY();
 							vertices[k + 2] = vertex.getZ();
-
+							tmp = vertices[k]+","+vertices[k+1]+","+vertices[k+2]+"\n";
+							fname="vert_"+layerName;
+							ToFile.write(tmp,fname);
 							
 							// Apply the rotation to each normal 
 							Point3d normal = new Point3d(normalsAsList.get(k), normalsAsList.get(k + 1), normalsAsList.get(k + 2));
@@ -1004,18 +1008,13 @@ public class JTImporter {
 						for(int j = startIndex; j < (endIndex - 2); j++){
 							faceIndices[l]     = j;
 							faceIndices[l + 1] = j + 1;
-							faceIndices[l + 2] = j + 2;
+							faceIndices[l + 2] = j + 2;							
+							tmp = faceIndices[l]+","+faceIndices[l+1]+","+faceIndices[l+2]+"\n";
+							fname="face_"+layerName;
+							ToFile.write(tmp,fname);
 							l += 3;
 						}
 					}
-					//abi edit : writing vertices to file
-					for (int i1 = 0; i1 < vertices.length-3; i1+=3) {
-						String ab = vertices[i1]+","+vertices[i1+1]+","+vertices[i1+2]+"\n";
-						ToFile.write(ab);
-						
-					}
-					System.out.println("Written to file: "+vertices.length+" vertices");
-					//ToFile.write("\n");
 					
 					_jtModel.addTriangles(vertices, faceIndices, colors, normals, layerName);
 
