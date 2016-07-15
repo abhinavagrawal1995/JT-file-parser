@@ -3,7 +3,8 @@ Java project to pars JT file. Imported from Google Code repository (now disconti
 
 
 Project includes a folder called "data"
-Store all JT files there.
+Store all JT files there. P.S. : Currently only works with 1 JT file at a time
+sample jt files in "samples" folder
 
 Run jcadlibrun.jar to export jt info to files.
 Run blendit.py in blender to import the info into blender
