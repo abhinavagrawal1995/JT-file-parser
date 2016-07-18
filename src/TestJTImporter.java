@@ -34,12 +34,7 @@ import de.raida.jcadlib.cadimport.jt.JTImporter;
 /**
  * Test class for the JT importer.
  */
-
-
 public class TestJTImporter {
-	
-	
-	
 	/**
 	 * Test export.
 	 * @param jtImporter    Instance of the JT importer
@@ -123,9 +118,8 @@ public class TestJTImporter {
 			System.out.println("         ... # entities: " + points.size());
 			for(Object[] point : points){
 				List<Double> vertices = (List<Double>)point[0];
-				System.out.println("             ... [entity 1] vertices: " + (vertices.size() / 3) + " => (showing 1) " + vertices.subList(0, 3));				
-				
-				
+				System.out.println("             ... [entity 1] vertices: " + (vertices.size() / 3) + " => (showing 1) " + vertices.subList(0, 3));
+
 				List<Float> colors = (List<Float>)point[1];
 				System.out.println("             ... [entity 1] colors: " + (colors.size() / 3) + " => (showing 1) " + colors.subList(0, 3));
 
@@ -178,13 +172,9 @@ public class TestJTImporter {
 				System.out.println("             ... [entity 1] colors: " + colors.length + " => (showing 1) [" + colors[0] + ", " + colors[1] + ", " + colors[2] + "]");
 				System.out.println("             ... [entity 1] normals: " + normals.length + " => (showing 1) [" + normals[0] + ", " + normals[1] + ", " + normals[2] + "]");
 
-				
-				
 				if(faces.size() > 1){
 					System.out.println("             ...");
 				}
-				
-				
 				break;
 			}
 		}
@@ -197,7 +187,6 @@ public class TestJTImporter {
 	public static void main(String[] arguments){
 		TestJTImporter testJTImporter = new TestJTImporter();
 		testJTImporter.testImport(new JTImporter(), "data");
-		System.out.println("\n*******************************");
-		
+		System.out.println("Done");
 	}
 }

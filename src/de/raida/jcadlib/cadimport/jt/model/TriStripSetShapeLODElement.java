@@ -102,9 +102,9 @@ public class TriStripSetShapeLODElement {
 			VertexShapeLODElement vertexShapeLODElement = VertexShapeLODElement.read(workingContext, true, false, false);
 
 			int versionNumber = Helper.readI16(workingContext.getByteBuffer());
-			if(versionNumber != 1){
+			/*if(versionNumber != 1){
 				throw new IllegalArgumentException("Found invalid version number: " + versionNumber);
-			}
+			}*/
 
 			return new TriStripSetShapeLODElement(	logicalElement,
 													vertexShapeLODElement,

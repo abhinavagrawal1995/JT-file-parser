@@ -8,6 +8,7 @@ del layers[0]
 
 
 for l in layers:
+	print(l)
 	verts=[]
 	with open('abi/vert_'+l.rstrip('\n'), 'r') as myfile1:
 	   for line in myfile1:

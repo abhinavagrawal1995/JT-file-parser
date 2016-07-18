@@ -149,7 +149,7 @@ public class TopologicallyCompressedVertexRecords {
 		}
 
 		CompressedVertexTextureCoordinateArray[] compressedVertexTextureCoordinateArrays = new CompressedVertexTextureCoordinateArray[8];
-		if((vertexBindings & 0xf00) != 0){					// Check for bits 9-12
+		/*if((vertexBindings & 0xf00) != 0){					// Check for bits 9-12
 			compressedVertexTextureCoordinateArrays[0] = CompressedVertexTextureCoordinateArray.read(workingContext);
 		}
 		if((vertexBindings & 0xf000) != 0){					// Check for bits 13-16
@@ -172,7 +172,7 @@ public class TopologicallyCompressedVertexRecords {
 		}
 		if((vertexBindings & 0xf000000000l) != 0){			// Check for bits 37-40
 			compressedVertexTextureCoordinateArrays[7] = CompressedVertexTextureCoordinateArray.read(workingContext);
-		}
+		}*/
 
 		CompressedVertexFlagArray compressedVertexFlagArray = null;
 		if((vertexBindings & 0x40) != 0){					// Check for bit 7
