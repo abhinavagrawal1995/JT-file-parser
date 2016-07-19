@@ -25,10 +25,8 @@
 package de.raida.jcadlib.cadimport.jt;
 
 import java.awt.Color;
-import java.io.BufferedWriter;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.InputStream;
 import java.net.ConnectException;
 import java.net.HttpURLConnection;
@@ -88,44 +86,14 @@ import de.raida.progress.ProgressEvent;
 import de.raida.progress.ProgressListenerInterface;
 
 
-class ToFile {
-
-	
-    public static void write(String abiStr,String fname) {
-        BufferedWriter writer = null;
-        try {
-            //create a temporary file
-            
-            File logFile = new File("abi/"+fname);
-
-            // This will output the full path where the file will be written to...
-            System.out.println(logFile.getCanonicalPath());
-
-            writer = new BufferedWriter(new FileWriter(logFile,true));
-            writer.write(abiStr);
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                // Close the writer regardless of what happens...
-                writer.close();
-            } catch (Exception e) {
-            }
-        }
-    }
-}
 
 /**
  * Imports the JT file, creates the model and gives access to the models attributes.
- * <br>(c) 2014-2016 by <a href="mailto:j.raida@gmx.net">Johannes Raida</a>
+ * <br>(c) 2014 by <a href="mailto:j.raida@gmx.net">Johannes Raida</a>
  * @author  <a href="mailto:j.raida@gmx.net">Johannes Raida</a>
  * @version 1.0
  */
 public class JTImporter {
-	
-	
-	//to write to final data file
-		ToFile testdata=new ToFile();
 		
 		
 	/** Regular expression of the JT signature (version 8) */
@@ -925,11 +893,6 @@ public class JTImporter {
 	 */
 	private void prepareGeometry(int parentNodeObjectID, TriStripSetShapeLODElement triStripSetShapeLODElement, PolylineSetShapeLODElement polylineSetShapeLODElement, PointSetShapeLODElement pointSetShapeLODElement, Matrix4d transformation, Color globalColor, String layerName){
 		try {
-
-			String tmp;
-			String fname;	
-			ToFile.write("\n"+layerName,"layers");
-
 			if(_jtModel.getJTFileVersion() < 9.0){
 				if(triStripSetShapeLODElement != null){
 					VertexBasedShapeCompressedRepData vertexBasedShapeCompressedRepData = triStripSetShapeLODElement.getVertexBasedShapeCompressedRepData();
@@ -937,10 +900,10 @@ public class JTImporter {
 					List<Float> colorsAsList = vertexBasedShapeCompressedRepData.getColors();
 					List<Integer> indicesAsList = vertexBasedShapeCompressedRepData.getIndices();
 					List<Double> verticesAsList = vertexBasedShapeCompressedRepData.getVertices();
-					
 					if((verticesAsList == null) || (verticesAsList.size() == 0)){
 						return;
-					}					
+					}
+					
 
 					// Extract the rotation from the transformation
 					Matrix4d rotation = (Matrix4d)transformation.clone();
@@ -982,7 +945,6 @@ public class JTImporter {
 					for(int i = 0; i < (indicesAsList.size() - 1); i++){
 						int startIndex = indicesAsList.get(i);
 						int endIndex = indicesAsList.get(i + 1);
-						
 						// Fill the vertex list
 						for(int j = startIndex; j < endIndex; j++){
 							int k = j * 3;
@@ -993,9 +955,7 @@ public class JTImporter {
 							vertices[k]     = vertex.getX();
 							vertices[k + 1] = vertex.getY();
 							vertices[k + 2] = vertex.getZ();
-							tmp = vertices[k]+","+vertices[k+1]+","+vertices[k+2]+"\n";
-							fname="vert_"+layerName;
-							ToFile.write(tmp,fname);
+							
 							
 							// Apply the rotation to each normal 
 							Point3d normal = new Point3d(normalsAsList.get(k), normalsAsList.get(k + 1), normalsAsList.get(k + 2));
@@ -1012,9 +972,7 @@ public class JTImporter {
 							faceIndices[l]     = j;
 							faceIndices[l + 1] = j + 1;
 							faceIndices[l + 2] = j + 2;							
-							tmp = faceIndices[l]+","+faceIndices[l+1]+","+faceIndices[l+2]+"\n";
-							fname="face_"+layerName;
-							ToFile.write(tmp,fname);
+							
 							l += 3;
 						}
 					}
@@ -1039,7 +997,6 @@ public class JTImporter {
 
 			// JT version 9+
 			} else {
-				
 				VertexShapeLODElement vertexShapeLODElement = null;
 				if(triStripSetShapeLODElement != null){
 					vertexShapeLODElement = triStripSetShapeLODElement.getVertexShapeLODElement();
@@ -1064,14 +1021,13 @@ public class JTImporter {
 					int[] indicesNew = new int[vertexIndicesList.size()];
 					double[] normalsNew = new double[vertexIndicesList.size() * 3];
 					int lastNormalIndex = -1;
-					
 					for(int i = 0, vertexCount = 0, normalCount = 0; i < (vertexIndicesList.size() / 3); i++){
 						int baseIndex = (i * 3);
 
 						int faceIndex1 = vertexIndicesList.get(baseIndex);
 						int faceIndex2 = vertexIndicesList.get(baseIndex + 1);
 						int faceIndex3 = vertexIndicesList.get(baseIndex + 2);
-						
+
 						int normalIndex1 = normalIndicesList.get(baseIndex);
 						int normalIndex2 = normalIndicesList.get(baseIndex + 1);
 						int normalIndex3 = normalIndicesList.get(baseIndex + 2);
@@ -1092,7 +1048,7 @@ public class JTImporter {
 						indicesNew[baseIndex]     = baseIndex;
 						indicesNew[baseIndex + 1] = baseIndex + 1;
 						indicesNew[baseIndex + 2] = baseIndex + 2;
-						
+
 						// Apply the transformation to each vertex
 						Point3d vertex = new Point3d(	verticesAsList.get((faceIndex1 * 3)),
 														verticesAsList.get((faceIndex1 * 3) + 1),
@@ -1102,11 +1058,6 @@ public class JTImporter {
 						verticesNew[vertexCount++] = vertex.getY();
 						verticesNew[vertexCount++] = vertex.getZ();
 
-						tmp=(faceIndex1 * 3)+","+((faceIndex1 * 3)+1)+","+((faceIndex1 * 3)+2)+"\n";
-						ToFile.write(tmp,"face_"+layerName);
-						tmp=vertex.getZ()+","+vertex.getY()+","+vertex.getZ()+"\n";
-						ToFile.write(tmp,"vert_"+layerName);
-
 						vertex = new Point3d(	verticesAsList.get((faceIndex2 * 3)),
 												verticesAsList.get((faceIndex2 * 3) + 1),
 												verticesAsList.get((faceIndex2 * 3) + 2));
@@ -1115,11 +1066,6 @@ public class JTImporter {
 						verticesNew[vertexCount++] = vertex.getY();
 						verticesNew[vertexCount++] = vertex.getZ();
 
-						tmp=(faceIndex2 * 3)+","+((faceIndex2 * 3)+1)+","+((faceIndex2 * 3)+2)+"\n";
-						ToFile.write(tmp,"face_"+layerName);
-						tmp=vertex.getZ()+","+vertex.getY()+","+vertex.getZ()+"\n";
-						ToFile.write(tmp,"vert_"+layerName);
-
 						vertex = new Point3d(	verticesAsList.get((faceIndex3 * 3)),
 												verticesAsList.get((faceIndex3 * 3) + 1),
 												verticesAsList.get((faceIndex3 * 3) + 2));
@@ -1127,14 +1073,6 @@ public class JTImporter {
 						verticesNew[vertexCount++] = vertex.getX();
 						verticesNew[vertexCount++] = vertex.getY();
 						verticesNew[vertexCount++] = vertex.getZ();
-
-						tmp=(faceIndex3 * 3)+","+((faceIndex3 * 3)+1)+","+((faceIndex3 * 3)+2)+"\n";
-						ToFile.write(tmp,"face_"+layerName);
-						tmp=vertex.getZ()+","+vertex.getY()+","+vertex.getZ()+"\n";
-						ToFile.write(tmp,"vert_"+layerName);
-
-							
-					
 
 						// Apply the rotation to each normal 
 						Point3d normal = new Point3d(	normalsAsList.get((normalIndex1 * 3)),
@@ -1218,7 +1156,7 @@ public class JTImporter {
 					for(int i = 0; i < (primitiveIndicesList.size() - 1); i++){
 						int startIndex = primitiveIndicesList.get(i);
 						int endIndex = primitiveIndicesList.get(i + 1);
-						System.out.println("9+");
+
 						// Fill the vertex list
 						List<Double[]> polylineVertices = new ArrayList<Double[]>();
 						List<Double[]> polylineColors = new ArrayList<Double[]>();
@@ -1227,7 +1165,6 @@ public class JTImporter {
 							double x = verticesAsList.get(vertexIndex);
 							double y = verticesAsList.get(vertexIndex + 1);
 							double z = verticesAsList.get(vertexIndex + 2);
-							
 
 							// Apply the transformation to each vertex
 							Point3d vertex = new Point3d(x, y, z);

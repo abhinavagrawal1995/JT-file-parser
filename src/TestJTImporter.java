@@ -22,7 +22,9 @@
 //	THE SOFTWARE.
 //################################################################################
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -30,6 +32,34 @@ import java.util.Iterator;
 import java.util.List;
 
 import de.raida.jcadlib.cadimport.jt.JTImporter;
+
+class ToFile {
+
+	
+    public static void write(String abiStr,String fname) {
+        BufferedWriter writer = null;
+        try {
+            //create a temporary file
+            
+            File logFile = new File("abi/"+fname);
+
+            // This will output the full path where the file will be written to...
+            System.out.println(logFile.getCanonicalPath());
+
+            writer = new BufferedWriter(new FileWriter(logFile,true));
+            writer.write(abiStr);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                // Close the writer regardless of what happens...
+                writer.close();
+            } catch (Exception e) {
+            }
+        }
+    }
+}
+
 
 /**
  * Test class for the JT importer.
@@ -162,6 +192,8 @@ public class TestJTImporter {
 			System.out.println("     ... layer: " + layerName);
 			ArrayList<Object[]> faces = faceEntities.get(layerName);
 			System.out.println("         ... # entities: " + faces.size());
+			ToFile.write("\n"+layerName,"layers");
+			String tmp;
 			for(Object[] faceList : faces){
 				double[] vertices = (double[])faceList[0];
 				int[] indices = (int[])faceList[1];
@@ -171,7 +203,15 @@ public class TestJTImporter {
 				System.out.println("             ... [entity 1] indices: " + indices.length + " => (showing 3) [" + indices[0] + ", " + indices[1] + ", " + indices[2] + "]");
 				System.out.println("             ... [entity 1] colors: " + colors.length + " => (showing 1) [" + colors[0] + ", " + colors[1] + ", " + colors[2] + "]");
 				System.out.println("             ... [entity 1] normals: " + normals.length + " => (showing 1) [" + normals[0] + ", " + normals[1] + ", " + normals[2] + "]");
-
+				for(int x=0;x<vertices.length-2;x+=3){
+					tmp=vertices[x] + "," + vertices[x+1] + ", " + vertices[x+2] + "\n";
+					ToFile.write(tmp, "vert_"+layerName);
+				}
+				for(int x=0;x<indices.length-2;x+=3){
+					tmp=indices[x] + "," + indices[x+1] + "," + indices[x+2] + "\n";
+					ToFile.write(tmp, "face_"+layerName);
+				}
+				
 				if(faces.size() > 1){
 					System.out.println("             ...");
 				}
