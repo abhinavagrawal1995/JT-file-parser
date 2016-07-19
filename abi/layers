@@ -1,10 +1,159 @@
 
-butterflyvalveopt#valve_body_sub_assy#valve_body#valve_body_SOLID_SOLIDS
-butterflyvalveopt#valve_sub_assy#arm#arm_SOLID_SOLIDS
-butterflyvalveopt#valve_sub_assy#jam_nut_375#jam_nut_375_SOLID_SOLIDS
-butterflyvalveopt#valve_sub_assy#screw_5_x_375#screw_5_x_375_SOLID_SOLIDS
-butterflyvalveopt#valve_sub_assy#shaft#shaft_SOLID_SOLIDS
-butterflyvalveopt#valve_body_sub_assy#screw_10_x_75#screw_10_x_75_SOLID_SOLIDS
-butterflyvalveopt#valve_body_sub_assy#cover#cover_SOLID_SOLIDS
-butterflyvalveopt#valve_sub_assy#valve#valve_SOLID_SOLIDS
-butterflyvalveopt#valve_sub_assy#woodruff_key#woodruff_key_SOLID_SOLIDS
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_15-Welding Splatter Protector Plate
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_11-Nut11
+MW04-TIG Welding#MW04_TIG Welding#MW0402_Torch#MW040205_Collet 
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_10-Table top2
+MW04-TIG Welding#Display#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_29-LCD2
+MW04-TIG Welding#MW04_TIG Welding#MW0401-Work Clamp#MW0201_06-Work Clamp Lower Handle
+MW04-TIG Welding#MW04_TIG Welding#MW0402_Torch#MW040206_Cup
+MW04-TIG Welding#MW04_TIG Welding#MW0402_Torch#MW040204_Collet Body
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_08-Texture1
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_04-Table support outer1
+MW04-TIG Welding#MW04_TIG Welding#MW0404-Gas regulator with flow meter#MW0204_05-Cylinder pressure gauge#MW0204_0502-Pin
+MW04-TIG Welding#MW04_TIG Welding#MW0409-Ground Cable. #MW0409_02-Cable
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_19-On- Off
+MW04-TIG Welding#MW04_TIG Welding#MW0402_Torch#MW040208_Gas Adjustment Knob
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_12-Nut10
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_04-Table support outer4
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_04-Table support outer2
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_04-Table support outer3
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_19-Metal Plate3
+MW04-TIG Welding#MW04_TIG Welding#MW0405-Work Cable #MW0405_02-Joint
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_12-Nut11
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_12-Nut12
+MW04-TIG Welding#MW04_TIG Welding#MW0403-Shielding Gas Cylinder#MW0203_01-Adjusting Screw
+MW04-TIG Welding#MW04_TIG Welding#MW0404-Gas regulator with flow meter#MW0204_05-Cylinder pressure gauge#MW0204_0504-iNDICATOR POINTER
+MW04-TIG Welding#MW04_TIG Welding#MW0403-Shielding Gas Cylinder#MW0203_04-Oxygen Regulator
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407_07-Support Leg Bolt
+MW04-TIG Welding#MW04_TIG Welding#MW0402_Torch#MW040202_Insulator
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_13-Nut2
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_13-Nut1
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_13-Nut4
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_13-Nut3
+MW04-TIG Welding#MW04_TIG Welding#MW0408_Electrode #MW0105_02 Electrode Wire Material
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_17-Switch 1
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407_02-Back Cover
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_25-Text.
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_21-O.c
+MW04-TIG Welding#Display#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_31-glass2
+MW04-TIG Welding#MW04_TIG Welding#MW0404-Gas regulator with flow meter#MW0204_05-Cylinder pressure gauge#MW0204_0501-Dial body
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_02-Crater current regulator
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_20-Symbole 
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407_05-Screw
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_08-Wheel3
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_16-Metal Plate2
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_08-Wheel4
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_08-Wheel1
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_08-Wheel2
+MW04-TIG Welding#MW04_TIG Welding#MW0408_Electrode #MW0105_01 Electrode wire
+MW04-TIG Welding#MW04_TIG Welding#MW0401-Work Clamp#MW0201_01-Work Clamp Upper Handle
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_15-Switch Slot 1
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_14-Table support inner4
+MW04-TIG Welding#MW04_TIG Welding#MW0406-SCASFC#MW0213_07-Chain_mir
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_13-Texture
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_14-Table support inner1
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_14-Table support inner2
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_14-Table support inner3
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_06-Side bolt9
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_09-Wheel assembly rigid1
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#Electrode box
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_06-Side bolt8
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_09-Wheel assembly rigid2
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_06-Side bolt7
+MW04-TIG Welding#MW04_TIG Welding#MW0404-Gas regulator with flow meter#MW0204_02-Inlet fitting
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_06-Side bolt6
+MW04-TIG Welding#MW04_TIG Welding#MW0404-Gas regulator with flow meter#MW0204_05-Cylinder pressure gauge#MW0204_0505-Glass cover
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_15-Welding Splatter Protector
+MW04-TIG Welding#MW04_TIG Welding#MW0406-SCASFC#MW0213_01-Frame
+MW04-TIG Welding#MW04_TIG Welding#MW0402_Torch#MW040203_End Cap
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_06-Side bolt1
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_03-LED display
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_26-Text.
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_03-Side bolt2
+MW04-TIG Welding#MW04_TIG Welding#MW0409-Ground Cable. #MW0409_01-Wair Cuppler
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_03-Side bolt1
+MW04-TIG Welding#MW04_TIG Welding#MW0401-Work Clamp#MW0201_03-Clip Wire 
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_11-Texture
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_03-Side bolt4
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_03-Side bolt3
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_03-Side bolt6
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_09-Wheel assembly rigid4
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_09-Wheel assembly rigid3
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_01-Control unit housing
+MW04-TIG Welding#table upper part#Table Upper Part#Fitting Workshop#SPARK WELDING MACHINE#G0WS00100_Workshop_setup#G0WS00100-Workshop setup#Alt Hier#Table and Weld#workshop#table_assembly#table_top
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_03-Side bolt9
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_03-Side bolt11
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_03-Side bolt10
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_03-Side bolt12
+MW04-TIG Welding#MW04_TIG Welding#MW0404-Gas regulator with flow meter#MW0204_06-Work pressure gauge#MW0204_0604-Indicator pointer
+MW04-TIG Welding#Display#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_28-LCD1
+MW04-TIG Welding#Display#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_04-Display glass
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_11-Nut9
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_05-Control Unit
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_11-Nut7
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407_08-Handle 
+MW04-TIG Welding#MW04_TIG Welding#MW0401-Work Clamp#MW0201_07-Spring
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_16-Switch Slot 2
+MW04-TIG Welding#MW04_TIG Welding#MW0401-Work Clamp#MW0201_05-Clamp Rod
+MW04-TIG Welding#MW04_TIG Welding#MW0404-Gas regulator with flow meter#MW0204_05-Cylinder pressure gauge#MW0204_0503-Flow meter texture
+MW04-TIG Welding#MW04_TIG Welding#MW0406-SCASFC#MW0213_03-Wheel
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_06-Side bolt12
+MW04-TIG Welding#MW04_TIG Welding#MW0401-Work Clamp#MW0201_02-Clip
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_12-Nut1
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_06-Side bolt11
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_10-Texture
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_12-Nut2
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_06-Side bolt10
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_12-Nut3
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_12-Nut4
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_12-Nut5
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_12-Nut6
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_12-Nut7
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_11-Nut1
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_11-Nut2
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_11-Nut3
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407_09-Wair Stopper 
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_11-Nut5
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_11-Nut6
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_14-Texture
+MW04-TIG Welding#MW04_TIG Welding#MW0404-Gas regulator with flow meter#MW0204_01-Gas regulator body
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407_01-Base
+MW04-TIG Welding#MW04_TIG Welding#MW0405-Work Cable #MW0405_03-Cable 
+MW04-TIG Welding#MW04_TIG Welding#MW0404-Gas regulator with flow meter#MW0204_04-Regulator knob
+MW04-TIG Welding#MW04_TIG Welding#MW0403-Shielding Gas Cylinder#MW0203_02-Cylinder Body
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_18-Switch 2
+MW04-TIG Welding#MW04_TIG Welding#MW0402_Torch#MW040201_Torch Body 
+MW04-TIG Welding#MW04_TIG Welding#MW0404-Gas regulator with flow meter#MW0204_06-Work pressure gauge#MW0204_0601-Dial body
+MW04-TIG Welding#MW04_TIG Welding#G0WS00102_16-Hooks
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407_03-Cover
+MW04-TIG Welding#MW04_TIG Welding#MW0404-Gas regulator with flow meter#MW0204_07-Pipe
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_12-Texture
+MW04-TIG Welding#MW04_TIG Welding#MW0404-Gas regulator with flow meter#MW0204_06-Work pressure gauge#MW0204_0603-Flow meter texture
+MW04-TIG Welding#MW04_TIG Welding#MW0406-SCASFC#MW0213_02-Back Shield
+MW04-TIG Welding#MW04_TIG Welding#MW0406-SCASFC#MW0213_04-Pin
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407_06-Support Leg
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_27-Led
+MW04-TIG Welding#MW04_TIG Welding#MW0402_Torch#MW040207_Tungsten Rod
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_06-Wire feed control
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_09-Texture
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_12-Nut9
+MW04-TIG Welding#MW04_TIG Welding#MW0404-Gas regulator with flow meter#MW0204_06-Work pressure gauge#MW0204_0602-Pin
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_12-Nut8
+MW04-TIG Welding#MW04_TIG Welding#MW0406-SCASFC#MW0213_07-Chain
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_07-Screw
+MW04-TIG Welding#MW04_TIG Welding#MW0403-Shielding Gas Cylinder#MW0203_03-Oxygen Regulator Rod
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_07-Bolt4
+MW04-TIG Welding#MW04_TIG Welding#MW0405-Work Cable #MW0405_01-Joint Nut 
+MW04-TIG Welding#MW04_TIG Welding#MW0406-SCASFC#MW0213_06-Handle
+MW04-TIG Welding#MW04_TIG Welding#MW0404-Gas regulator with flow meter#MW0204_03-Outlet fitting
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_24-Text.
+MW04-TIG Welding#Display#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_30-glass1
+MW04-TIG Welding#MW04_TIG Welding#MW0401-Work Clamp#MW0201_04-Clip Nut
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_01-Table assm#G0WS00102_0101-Angle frame
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_07-Bolt3
+MW04-TIG Welding#MW04_TIG Welding#MW0406-SCASFC#MW0213_05-Rubber Grip
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_07-Bolt2
+MW04-TIG Welding#MW04_TIG Welding#MW04-Welding table#G0WS00102_07-Bolt1
+MW04-TIG Welding#MW04_TIG Welding#MW0404-Gas regulator with flow meter#MW0204_06-Work pressure gauge#MW0204_0605-Glass cover
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_22-Tic Cupllare
+MW04-TIG Welding#MW04_TIG Welding#MW0407-Tig Welding Machine#MW0407-04-Welding start stop control unit#MW040704_23-Extra Cupllare
