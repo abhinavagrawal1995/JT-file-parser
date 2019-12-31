@@ -1,5 +1,5 @@
 # jCADlib
-Java project to pars JT file. Imported from Google Code repository (now discontinued)
+Java project to parse JT-files. Imported from Google Code repository (now discontinued)
 
 
 Project includes a folder called "data"
